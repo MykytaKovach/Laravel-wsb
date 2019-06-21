@@ -12,7 +12,7 @@ class TripController extends Controller
     public function index()
     {
         // pobierz urlopy
-        $trips = Trip::paginate(5);
+        $trips = Trip::orderBy('id','desc')->paginate(5);
         return TripResource::collection($trips);
     }
 
