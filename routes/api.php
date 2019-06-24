@@ -36,3 +36,14 @@ Route::put('trip','TripController@store');
 //usun urlop
 
 Route::delete('trip/{id}','TripController@destroy');
+
+//wyswietl uzytkownika
+Route::get('login','UserController@show');
+
+//Utworz uytkownika
+Route::post('user','UserController@store');
+
+
+//edytuj uzytkownika
+
+Route::put('user','UserController@edit');

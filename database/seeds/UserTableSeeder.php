@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TripsTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,6 @@ class TripsTableSeeder extends Seeder
      */
     public function run()
     {
-        
-        factory(App\Trip::class,10)->create();
+        factory(App\User::class,1)->create();
     }
 }
