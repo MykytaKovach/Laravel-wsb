@@ -38,7 +38,7 @@ Route::put('trip','TripController@store');
 Route::delete('trip/{id}','TripController@destroy');
 
 //wyswietl uzytkownika
-Route::get('login','UserController@show');
+Route::post('login','UserController@show');
 
 //Utworz uytkownika
 Route::post('user','UserController@store');

@@ -61,6 +61,7 @@ class UserController extends Controller
 
     public function show(Request $request)
     {   
+    	
          $user = User::where("email",$request->email)->get();
          if(!$user->isEmpty()){
              $user=json_decode($user)[0];
