@@ -14,11 +14,11 @@ class UserController extends Controller
   
     public function store(Request $request)
     {
-        $user = User::where("email",$request->email)->get();
-         if(!$user->isEmpty()){
+         
+         if(!User::where("email",$request->email)->get()->isEmpty()){
             return json_encode(array("error"=>"Email is already registered"));
          }
-
+        $user = new User;
         
         $user->id = $request->input('id');
         $user->email = $request->input('email');
